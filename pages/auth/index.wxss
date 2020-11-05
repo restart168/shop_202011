@@ -1,0 +1,4 @@
+button {
+  padding: 20rpx;
+  margin: 50rpx auto;
+}

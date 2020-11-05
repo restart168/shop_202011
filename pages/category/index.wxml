@@ -1,0 +1,23 @@
+<view>
+  <view class="search">
+  <SearchInput></SearchInput>
+</view>
+<view class="container">
+<scroll-view class="leftMenu" scroll-y>
+<view wx:for="{{leftMentList}}" bindtap="handchange" data-index="{{index}}" class="{{index==currentindex?'active':''}}" wx:key="index" >{{item}}</view>
+</scroll-view>
+<scroll-view class="righrMenu" scroll-y scroll-top='{{init}}'>
+  <view wx:for="{{rightMentList}}" wx:key="index">
+    <view class="title">{{item.cat_name}}</view>
+    <view class="good_list">
+    <navigator wx:for="{{item.children}}" wx:for-item="item1" class="children"  wx:key="index" url="/pages/good_list/index?cid={{item1.cat_id}}" >
+      
+        <image src="{{item1.cat_icon}}" mode="widthFix"></image>
+        {{item1.cat_name}}
+
+      </navigator>
+    </view>
+  </view>
+</scroll-view>
+</view>
+</view>

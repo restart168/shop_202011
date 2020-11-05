@@ -1,0 +1,100 @@
+<view class="revice_address_row" wx:if="{{!address.userName}}">
+	<view class="address_btn">
+		<button
+		 bindtap="handleshop"
+		 type="primary"
+		 plain="{{true}}"
+		>+收货地址
+		</button>
+	</view>
+
+</view>
+<view class="address_show_row" wx:else>
+	<view class="address_info">
+		<view>
+			{{address.userName}}
+		</view>
+		<view>
+			{{address.provinceName+address.cityName+address.countyName+address.detailInfo}}
+		</view>
+
+	</view>
+	<view class="phonenumber">
+		{{address.telNumber}}
+	</view>
+
+</view>
+<view class="cart_content">
+	<view class="cart_title">购物车</view>
+	<view class="cart_main" wx:if="{{cart.length!=0?true:false}}">
+		<view class="cart_item" wx:for="{{cart}}">
+			<view class="cart_chk_wrap">
+				<checkbox-group data-id="{{item.data.message.goods_id}}" bindchange="handleitemchange">
+
+					<checkbox checked="{{item.data.message.checked}}">
+
+					</checkbox>
+				</checkbox-group>
+			</view>
+			<navigator class="cart_img_wrap">
+				<image src="{{item.data.message.goods_small_logo}}" mode="widthFix" />
+
+			</navigator>
+			<view class="cart_info_wrap">
+				<view class="goods_name">{{item.data.message.goods_name}}</view>
+				<view class="goods_price_wrap">
+					<view class="goods_price">￥{{item.data.message.goods_price}}</view>
+					<view class="cart_num_tool">
+						<view
+						 class="sub"
+						 bindtap='handlesub'
+						 data-id="{{item.data.message.goods_id}}"
+						 data-operation='{{-1}}'
+						>-
+						</view>
+						<view class="Num">{{item.data.message.Num}}</view>
+						<view
+						 class="sub"
+						 bindtap='handlesub'
+						 data-id="{{item.data.message.goods_id}}"
+						 data-operation='{{1}}'
+						>+
+						</view>
+					</view>
+				</view>
+			</view>
+		</view>
+	</view>
+	<view class="cartNull" wx:else>
+		<image mode="widthFix" src="http://img95.699pic.com/photo/40052/8214.jpg_wh860.jpg!/fw/562"></image>
+	</view>
+</view>
+<view class="foot_tools">
+	<view class="all_chk_wrap">
+		<checkbox-group bindchange="handleallchecked">
+			<checkbox checked="{{allchecked}}">
+
+			</checkbox>
+		</checkbox-group>
+
+		<view>
+			全选
+		</view>
+
+	</view>
+	<view class="total_price_wrap">
+
+		<view class="total_price">
+
+			合计:
+			<text class="total_price_text" >￥{{allPrice}}</text>
+
+		</view>
+		<view>包含运费</view>
+
+	</view>
+	<view class="order_pay_wrap" bindtap="handlepay">
+		结算({{allNum}})
+	</view>
+</view>
+

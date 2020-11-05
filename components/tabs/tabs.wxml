@@ -1,0 +1,16 @@
+<view class="tabs">
+	<view
+	 wx:for="{{tabslist}}"
+	 class="children {{item.isActive?'active':''}}"
+	 bindtap="handclick"
+	 data-index="{{index}}"
+	>{{item.name}}
+
+	</view>
+	<view class="container">
+		<slot></slot>
+
+	</view>
+
+</view>
+
