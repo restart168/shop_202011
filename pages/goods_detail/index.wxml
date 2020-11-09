@@ -26,68 +26,8 @@
 			{{goods_detail.goods_name}}
 
 		</view>
-		<view class="goods_collect">
-			<text class=" iconfont icon-shoucang" >
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-</text>
+		<view class="goods_collect" bindtap="handlecollect">
+			<text class=" iconfont icon-shoucang {{isActive?'icon-shoucang1':''}}" ></text>
 			<view class="collect_text">
 				收藏
 			</view>
@@ -108,7 +48,7 @@
 				联系客服
 			</view>
 
-		</view> 
+		</view>
 		<view class="tool_item">
 			<view class="iconfont icon-fenxiang"></view>
 			<view>
@@ -116,7 +56,11 @@
 			</view>
 
 		</view>
-		<navigator class="tool_item" bindtap="handleshop" url="/pages/cart/index">
+		<navigator
+		 class="tool_item"
+		 bindtap="handleshop"
+		 url="/pages/cart/index"
+		>
 			<view class="iconfont icon-qicheqianlian-"></view>
 			<view>
 				购物车

@@ -1,37 +1,26 @@
 <tabs tabslist="{{tabs}}" bindgetindex="getindex">
-	<block wx:if="{{tabs[0].isActive}}">
-		<view class="first_tab">
-			<navigator
-			 class="good_item"
-			 wx:for="{{goodlist}}"
-			 url="/pages/goods_detail/index?goods_id={{item.goods_id}}"
-			>
-				<view class="item_image">
-					<image src="{{item.goods_small_logo?item.goods_small_logo:'http://image2.suning.cn/uimg/b2c/newcatentries/0070078057-000000000634917020_1_400x400.jpg'}}" mode="widthFix">
-					</image>
-				</view>
-				<view class="good_info">
-					<view class="item_title">
-						{{item.goods_name}}
-					</view>
-					<view class="item_price">
-						${{item.goods_price}}
-					</view>
-				</view>
+	<view class="order_main">
+		<view
+		 wx:for="{{orders}}"
+		 wx:key="order_id"
+		 class="order_item"
+		>
 
-			</navigator>
+			<view class="order_no_row">
+				<view class="order_no_text">订单编号</view>
+				<view class="order_no_value">{{item.order_number}}</view>
+			</view>
+			<view class="order_price_row">
+				<view class="order_price_text">订单价格</view>
+				<view class="order_price_value">￥{{item.order_price}}</view>
+			</view>
+			<view class="order_time_row">
+				<view class="order_time_text">订单日期</view>
+				<view class="order_time_value">{{item.create_time_cn}}</view>
+			</view>
+
 		</view>
-
-	</block>
-	<block wx:if="{{tabs[1].isActive}}">
-		22
-	</block>
-	<block wx:if="{{tabs[2].isActive}}">
-		33
-	</block>
-	<block wx:if="{{tabs[3].isActive}}">
-		44
-	</block>
+	</view>
 
 </tabs>
 
