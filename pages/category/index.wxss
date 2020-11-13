@@ -1,49 +1,55 @@
+page {
+  background-color: #f2f2f2;
+}
 .search {
   z-index: 999;
 }
 .container {
   margin-top: 10rpx;
   height: calc(100vh - 100rpx);
+  display: flex;
 }
 .leftMenu {
-  position: fixed;
-  float: left;
-  height: 100%;
+  flex: 2;
 }
 .leftMenu view {
-  box-sizing: border-box;
-  width: 20vw;
-  height: 50rpx;
-  padding: 5rpx 0;
-  text-align: center;
-  margin-top: 10rpx;
-  line-height: 50rpx;
+  height: 80rpx;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 .righrMenu {
-  width: 80vw;
-  float: right;
-  height: 100%;
+  flex: 7;
+  margin: 0 20rpx;
 }
-.righrMenu .title {
+.righrMenu .block {
+  background-color: #ffffff;
+  border-radius: 20rpx;
+  margin-bottom: 20rpx;
+}
+.righrMenu .block .title {
   width: 100%;
   margin-top: 10rpx;
   height: 50rpx;
   text-align: center;
   line-height: 50rpx;
-  font-size: large;
+  font-weight: 600;
+  font-size: 34rpx;
 }
-.righrMenu .good_list {
+.righrMenu .block .good_list {
   display: flex;
   flex-wrap: wrap;
 }
-.righrMenu .good_list .children {
+.righrMenu .block .good_list .children {
   width: 33.33%;
   text-align: center;
+  padding: 0 15rpx;
 }
-.righrMenu .good_list .children image {
+.righrMenu .block .good_list .children image {
   width: 100%;
 }
 .active {
   color: var(--themeColor);
   border-left: 5rpx solid currentColor;
+  font-size: 32rpx;
 }

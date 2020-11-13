@@ -39,7 +39,7 @@
       },
       {
         "pagePath": "pages/cart/index",
-        "text": "狗屋车",
+        "text": "购物车",
         "iconPath": "icon/shop.png",
         "selectedIconPath": "icon/_shop.png"
       },

@@ -1,48 +1,57 @@
 @maxvh: 100vh;
 @maxvw: 100vw;
+page {
+  background-color: #f2f2f2;
+}
 .search {
   z-index: 999;
 }
 .container {
   margin-top: 10rpx;
   height: ~"calc(100vh - 100rpx)";
+  display: flex;
 }
 .leftMenu {
-  position: fixed;
-  float: left;
-  height: 100%;
+  flex: 2;
 
   view {
-    box-sizing: border-box;
-    width: 20vw;
-    height: 50rpx;
-    padding: 5rpx 0;
-    text-align: center;
-    margin-top: 10rpx;
-    line-height: 50rpx;
+    height: 80rpx;
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
 }
 .righrMenu {
-  width: 80vw;
-  float: right;
-  height: 100%;
+  flex: 7;
+  margin: 0 20rpx;
 
-  .title {
-    width: 100%;
-    margin-top: 10rpx;
-    height: 50rpx;
-    text-align: center;
-    line-height: 50rpx;
-    font-size: large;
-  }
-  .good_list {
-    display: flex;
-    flex-wrap: wrap;
-    .children {
-      width: 33.33%;
+  .block {
+    background-color: #ffffff;
+    border-radius: 20rpx;
+    margin-bottom: 20rpx;
+
+    .title {
+      width: 100%;
+      margin-top: 10rpx;
+      height: 50rpx;
       text-align: center;
-      image {
-        width: 100%;
+      line-height: 50rpx;
+      font-weight: 600;
+      font-size: 34rpx;
+    }
+
+    .good_list {
+      display: flex;
+      flex-wrap: wrap;
+
+      .children {
+        width: 33.33%;
+        text-align: center;
+        padding: 0 15rpx;
+
+        image {
+          width: 100%;
+        }
       }
     }
   }
@@ -50,4 +59,5 @@
 .active {
   color: var(--themeColor);
   border-left: 5rpx solid currentColor;
+  font-size: 32rpx;
 }

@@ -1,2 +1,34 @@
-<!--pages/feedback/index.wxml-->
-<text>pages/feedback/index.wxml</text>
+<tabs tabslist="{{tabs}}" bindgetindex="getindex">
+
+	<view class="fb_main">
+		<view class="fb_title">问题的种类</view>
+		<view class="fb_tips">
+			<text>功能建议</text>
+			<text>购买遇到文体</text>
+			<text>性能问题</text>
+			<text>其他</text>
+		</view>
+		<view class="fb_content">
+			<textarea></textarea>
+			<view class="fb_foot_tool">
+				<button>+</button>
+			</view>
+
+		</view>
+		<view class="fb_btn_wrap">
+			<button type="warn">
+				<icon
+				 type="success_no_circler"
+				 size="23"
+				 color="white"
+				>
+
+				</icon>
+				提交
+
+			</button>
+		</view>
+
+	</view>
+</tabs>
+

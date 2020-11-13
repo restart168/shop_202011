@@ -1,33 +1,18 @@
 page {
   background-color: #ccc;
 }
-.userInfo_wrap {
+.user_info_wrap {
   height: 45vh;
   overflow: hidden;
   background-color: var(--themeColor);
   position: relative;
-  .login {
-    position: absolute;
-    left: 50%;
-    transform: translateX(-50%);
-    top: 40%;
-    // display: flex;
-    // justify-content: center;
-    // align-items: center;
-    border: 1rpx solid greenyellow;
-    color: greenyellow;
-    font-size: 38rpx;
-    padding: 38rpx;
-    border-radius: 10rpx;
-  }
-
   .user_img_wrap {
     position: relative;
     .user_bg {
-      // width: 100%;
       height: 50vh;
-      //使用高斯模糊
-      filter: blur(10px);
+      // 高斯模糊
+      filter: blur(10rpx);
+      width: 100%;
     }
     .user_info {
       position: absolute;
@@ -43,8 +28,20 @@ page {
       .user_name {
         color: #fff;
         margin-top: 40rpx;
+        // font-size: 40rpx;
       }
     }
+  }
+  .user_btn {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 40%;
+    border: 1rpx solid greenyellow;
+    color: greenyellow;
+    font-size: 38rpx;
+    padding: 30rpx;
+    border-radius: 10rpx;
   }
 }
 .user_content {

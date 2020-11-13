@@ -1,13 +1,37 @@
 page {
   background-color: #ccc;
 }
-.userInfo_wrap {
+.user_info_wrap {
   height: 45vh;
   overflow: hidden;
   background-color: var(--themeColor);
   position: relative;
 }
-.userInfo_wrap .login {
+.user_info_wrap .user_img_wrap {
+  position: relative;
+}
+.user_info_wrap .user_img_wrap .user_bg {
+  height: 50vh;
+  filter: blur(10rpx);
+  width: 100%;
+}
+.user_info_wrap .user_img_wrap .user_info {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  top: 20%;
+  text-align: center;
+}
+.user_info_wrap .user_img_wrap .user_info .user_icon {
+  width: 150rpx;
+  height: 150rpx;
+  border-radius: 50%;
+}
+.user_info_wrap .user_img_wrap .user_info .user_name {
+  color: #fff;
+  margin-top: 40rpx;
+}
+.user_info_wrap .user_btn {
   position: absolute;
   left: 50%;
   transform: translateX(-50%);
@@ -15,31 +39,8 @@ page {
   border: 1rpx solid greenyellow;
   color: greenyellow;
   font-size: 38rpx;
-  padding: 38rpx;
+  padding: 30rpx;
   border-radius: 10rpx;
-}
-.userInfo_wrap .user_img_wrap {
-  position: relative;
-}
-.userInfo_wrap .user_img_wrap .user_bg {
-  height: 50vh;
-  filter: blur(10px);
-}
-.userInfo_wrap .user_img_wrap .user_info {
-  position: absolute;
-  left: 50%;
-  transform: translateX(-50%);
-  top: 20%;
-  text-align: center;
-}
-.userInfo_wrap .user_img_wrap .user_info .user_icon {
-  width: 150rpx;
-  height: 150rpx;
-  border-radius: 50%;
-}
-.userInfo_wrap .user_img_wrap .user_info .user_name {
-  color: #fff;
-  margin-top: 40rpx;
 }
 .user_content {
   position: relative;
