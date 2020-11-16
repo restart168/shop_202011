@@ -3,7 +3,7 @@
     "pages/index/index",
     "pages/search/index",
     "pages/category/index",
-    "pages/good_list/index",
+    "pages/goods_list/index",
     "pages/goods_detail/index",
     "pages/cart/index",
     "pages/collect/index",
@@ -17,7 +17,7 @@
   "window": {
     "backgroundTextStyle": "light",
     "navigationBarBackgroundColor": "#eb4458",
-    "navigationBarTitleText": "电商项目",
+    "navigationBarTitleText": "品优购",
     "navigationBarTextStyle": "black"
   },
   "tabBar": {

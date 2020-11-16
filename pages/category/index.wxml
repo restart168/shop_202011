@@ -30,7 +30,7 @@
 					 wx:for-item="item1"
 					 class="children"
 					 wx:key="index"
-					 url="/pages/good_list/index?cid={{item1.cat_id}}"
+					 url="/pages/goods_list/index?cid={{item1.cat_id}}"
 					>
 
 						<image src="{{item1.cat_icon}}" mode="widthFix"></image>

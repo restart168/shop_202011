@@ -4,7 +4,7 @@
     "ignore": []
   },
   "setting": {
-    "urlCheck": true,
+    "urlCheck": false,
     "es6": true,
     "enhance": true,
     "postcss": true,
@@ -129,6 +129,13 @@
           "id": -1,
           "name": "pages/feedback/index",
           "pathName": "pages/feedback/index",
+          "query": "",
+          "scene": null
+        },
+        {
+          "id": -1,
+          "name": "pages/auth/index",
+          "pathName": "pages/auth/index",
           "scene": null
         }
       ]

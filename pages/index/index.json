@@ -3,6 +3,6 @@
    "SearchInput":"../../components/SearchInput/Searchinput"
  
   },
-  "navigationBarTitleText":"电商首页",
+  "navigationBarTitleText":"首页",
   "onPullDownRefresh":"ture"
 }

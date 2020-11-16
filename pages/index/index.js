@@ -20,8 +20,13 @@ Page({
   },
   async getfloorlist() {
     const result = await request({ url: "/home/floordata" });
+    const data = JSON.stringify(result.data.message).replace(
+      /goods_list/g,
+      "goods_list/index"
+    );
+
     this.setData({
-      floorlist: result.data.message,
+      floorlist: JSON.parse(data),
     });
   },
 

@@ -1,36 +1,55 @@
-
 <view>
-  <view class="search">
-  <SearchInput></SearchInput>
-</view>
-  <view class="index_swiper">
-  <swiper autoplay="true" indicator-dots="it" circular="true">
-    <swiper-item wx:for="{{swiperList}}" wx:key="item.goods_id">
-      <image src="{{item.image_src}}" mode="widthFix"></image>
-    </swiper-item>
-  </swiper>
-</view>
-<view class="index_cate">
- <navigator wx:for="{{navlist}}" wx:key="index">
-   <image src="{{item.image_src}}" mode="widthFix"></image>
-   
- </navigator>
-   
-</view>
-<view class="index_floor">
-  <block wx:for="{{floorlist}}" wx:key="index">
-  <view class="floor_title">
-  <image src="{{item.floor_title.image_src}}" mode="widthFix"></image>
-    </view>
-    <view class="floor_list">
-    <navigator wx:for="{{item.product_list}}" wx:for-item="item1" wx:for-index="index2" wx:key="index2">
-      <image src="{{item1.image_src}}" mode="{{index2==0?'widthFix':'scaleToFill'}}"></image>
-      
-    </navigator>
-      
-    </view>
+	<view class="search">
+		<SearchInput></SearchInput>
+	</view>
+	<view class="index_swiper">
+		<swiper
+		 autoplay="true"
+		 indicator-dots="it"
+		 circular="true"
+		>
+			<swiper-item wx:for="{{swiperList}}" wx:key="item.goods_id">
+				<navigator url="/pages/goods_detail/index?goods_id={{item.goods_id}}">
+					<image src="{{item.image_src}}" mode="widthFix"></image>
 
-  </block>
-      
+				</navigator>
+
+			</swiper-item>
+		</swiper>
+	</view>
+	<view class="index_cate">
+		<navigator
+		 wx:for="{{navlist}}"
+		 wx:key="index"
+		 url="/pages/category/index"
+		 open-type="switchTab"
+		>
+			<image src="{{item.image_src}}" mode="widthFix"></image>
+
+		</navigator>
+
+	</view>
+	<view class="index_floor">
+		<block wx:for="{{floorlist}}" wx:key="index">
+			<view class="floor_title">
+				<image src="{{item.floor_title.image_src}}" mode="widthFix"></image>
+			</view>
+			<view class="floor_list">
+				<navigator
+				 wx:for="{{item.product_list}}"
+				 wx:for-item="item1"
+				 wx:for-index="index2"
+				 wx:key="index2"
+				 url="{{item1.navigator_url}}"
+				>
+					<image src="{{item1.image_src}}" mode="{{index2==0?'widthFix':'scaleToFill'}}"></image>
+
+				</navigator>
+
+			</view>
+
+		</block>
+
+	</view>
 </view>
-</view>
+

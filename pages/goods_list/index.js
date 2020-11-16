@@ -42,7 +42,8 @@ Page({
   },
   //options(Object)
   onLoad: function (options) {
-    this.QueryPanams.cid = options.cid;
+    this.QueryPanams.cid = options.cid || "";
+    this.QueryPanams.query = options.query || "";
     this.getgoodlist();
     console.log(this.data.goodlist);
   },

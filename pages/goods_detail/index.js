@@ -74,6 +74,15 @@ Page({
       mask: true,
     });
   },
+  handleCarpay() {
+    wx.showToast({
+      title: "很抱歉，暂时不能购买哦",
+      icon: "none",
+      image: "",
+      duration: 1500,
+      mask: false,
+    });
+  },
   /**
    * 生命周期函数--监听页面加载
    */

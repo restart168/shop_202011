@@ -72,7 +72,7 @@
 			加入购物车
 
 		</view>
-		<view class="tool_item btn_buy">
+		<view class="tool_item btn_buy" bindtap="handleCarpay">
 
 			立即购买
 
